@@ -8,6 +8,7 @@ hooks:
     - location: scripts/stopServer.sh
   BeforeInstall:
     - location: scripts/installApp.sh
+      runas: ec2-user
   ApplicationStart:
     - location: scripts/startServer.sh
       timeout: 300
