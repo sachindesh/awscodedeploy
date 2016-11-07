@@ -1,7 +1,7 @@
 version: 0.0
 os: linux
 files:
-  - source: awscodedeploy/var/www/localhost/htdocs/
+  - source: var/www/localhost/htdocs/
     destination: /var/www/html
 hooks:
   ApplicationStop:
