@@ -1,0 +1,13 @@
+version: 0.0
+os: linux
+#files:
+#  - source: awscodedeploy/var/www/localhost/htdocs/
+#    destination: /var/www/html
+hooks:
+  ApplicationStop:
+    - location: scripts/stopServer.sh
+  BeforeInstall:
+    - location: scripts/installApp.sh
+  ApplicationStart:
+    - location: scripts/startServer.sh
+      timeout: 300
